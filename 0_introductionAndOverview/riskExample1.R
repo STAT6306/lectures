@@ -1,10 +1,9 @@
-#monte carlo
 n  = 10
 Y  = rnorm(n)
 
 plot(density(Y)$x,density(Y)$y,
      type='l',col='red',
-     ylim=c(0,dnorm(0)),
+     ylim=c(0,dnorm(0,sd=1/sqrt(n))),
      xlab='Y',ylab='Density')
 abline(v=mean(Y),col='red')
 yGrid = seq(min(Y),max(Y),length=1000)
@@ -20,4 +19,4 @@ for(iter in 1:nSamples){
 lines(density(YmeanVec)$x,density(YmeanVec)$y,
       col='blue',lty=2)
 abline(v=mean(YmeanVec),col='blue')
-lines(yGrid,dnorm(yGrid,mean=mu,sd=1/sqrt(n)),col='black',lty=2)
+lines(yGrid,dnorm(yGrid,sd=1/sqrt(n)),col='black',lty=2)
