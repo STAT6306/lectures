@@ -10,7 +10,7 @@ Y = X%*%b + rnorm(n)
 
 
 #Stochastic Gradient Descent
-miniBatchParm = n/2
+miniBatchParm = n/100
 
 fF = function(X,b){
   return( X %*% b)
@@ -49,12 +49,16 @@ for(iter in 1:nIter){
 
 bHat_LS = lm(Y~X-1)$coef
 print(bHat_LS)
+print(bHatIter[nIter,])
 
+if(p == 2){
 plot(bHatIter[,1:2],col=rainbow(nIter),xlab='beta1',ylab='beta2')
 points(bHat_LS[1],bHat_LS[2],col='black',pch=2)
+}
 
+if(p >= 3){
 require(scatterplot3d)
 out.plot = scatterplot3d(bHatIter[,1:3],color=rainbow(nIter),
                          xlab='beta1',ylab='beta2',zlab='beta3')
-                        
 out.plot$points3d(bHat_LS[1],bHat_LS[2],bHat_LS[3],col='black',pch=2)
+}
