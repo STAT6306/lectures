@@ -16,8 +16,8 @@ Ytest = sin(Xtest%*%b) + rnorm(nTest)
 miniBatchParm = 5
 
 # Utility functions
-fF = function(X,b){
-  return( X %*% b)
+fF = function(Z,b){
+  return( Z %*% b)
 }
 gam_kF = function(X,alpha){
   return(X %*% alpha)

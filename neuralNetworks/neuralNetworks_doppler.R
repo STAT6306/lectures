@@ -1,26 +1,23 @@
 ##############################
 ##############################
 ##############################
-set.seed(1)
-p = 5
-n = 25
-X = matrix(rnorm(n*p),nrow=n)
-b = p:1
-Y = sin(X%*%b) + rnorm(n)
+X = matrix(seq(.05,1,length=200),ncol=1)
+Y = sin(1/X[,1]) + rnorm(100,0,.1)
+plot(X,Y)
+Xtest = matrix(seq(.05,1,length=1000),ncol=1)
+Ytest = sin(1/Xtest[,1]) + rnorm(1000,0,.1)
 
-nTest = 100
-Xtest = matrix(rnorm(nTest*p),nrow=nTest)
-Ytest = Xtest%*%b + rnorm(nTest)
+p = 1
 
 #Stochastic Gradient Descent Batch Parm
-miniBatchParm = 5
+miniBatchParm = 25
 
 # Utility functions
-fF = function(Z,b){
-  return( Z %*% b)
+fF = function(X,b){
+  return( X %*% b)
 }
 gam_kF = function(X,alpha){
-  return(X %*% alpha)
+  return(X * alpha)
 }
 sigF = function(gam_k){
   return(1/(1+exp(-gam_k)))
@@ -36,9 +33,9 @@ rF = function(ell){
 }
 
 # NN parms:
-K             = 2
+K             = 1
 nIter         = 20000
-learnRate     = .02
+learnRate     = .05
 
 
 #Step 0: Initialize
@@ -61,19 +58,19 @@ for(iter in 1:nIter){
       r     = rF(ell)
       #Step 2b: Backward
       ## beta
-      dell_df = ##%%##
+      dell_df = -2*(Y[batch] - f)
       df_dbk  = Z[,k]
-      dR_dbk  = ##%%##
+      dR_dbk   = rF( dell_df*df_dbk )
       ## alpha
-      df_dZk   = ##%%##
+      df_dZk  = bHat[k]
       dZk_dgk  = d_sigF(gam_k)
       dgk_dakj = X[batch,j]
-      dR_dakj  = ##%%##
+      dR_dakj  = rF(dgk_dakj * dZk_dgk * df_dZk * dell_df )
       #Step 3a: Update beta
-      bHat[k]  = ##%%##
+      bHat[k]  = bHat[k] - learnRate * dR_dbk
     }
     #Step 3b: Update alpha
-    alphaHat[j,k]  = ##%%##
+    alphaHat[j,k]  = alphaHat[j,k] - learnRate * dR_dakj
   }
   bHatIter[iter,]      = bHat
   alphaHatIter[iter,,] = alphaHat
@@ -83,11 +80,17 @@ for(iter in 1:nIter){
 
 bHat_LS = lm(Y~X-1)$coef
 
-Yhat_LS = ##%%##
-Yhat_NN = ##%%##
+Yhat_LS = Xtest %*% bHat_LS
+Yhat_NN = sigF(Xtest  %*% alphaHat) %*% bHat
 rF( ellF(Ytest,Yhat_LS))
 rF( ellF(Ytest,Yhat_NN))
-
+plot(Xtest,Ytest)
+plot(Xtest,Yhat_NN)
+plot(Xtest,Yhat_LS)
 #Get a plot of the first and second hidden unit on all of the training data
 
+Z_train_k = drop(sigF(X %*% alphaHat[,1:2]))
+plot(Z_train_k)
+
 #Which hidden unit has the largest value for the first test observations?
+drop(sigF(gam_kF(Xtest[1,],alphaHat)))
