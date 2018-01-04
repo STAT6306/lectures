@@ -1,3 +1,0 @@
-1. classificationIntroduction
-2. classificationMetrics
-3. classificationLDAandQDA (up to end of LDA notes, slide 43)
