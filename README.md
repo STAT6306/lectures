@@ -11,6 +11,6 @@ for each day:
 Date     | Slides
 ---------|--------
 Jan. 23: | introductionAndOverview (slides 1-29)
-Jan. 25: | introductionAndOverview (slides 29-end)
+Jan. 25: | introductionAndOverview (slides 29-end) introductionAndOverview (slides 1-?)
 Jan. 30  |
 Feb. 02  |
