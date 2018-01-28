@@ -16,3 +16,7 @@ Jan. 30  | introductionRegression (slides 1-?)
 Feb. 01  |
 Feb. 06  |
 Feb. 08  |
+Feb. 13  |
+Feb. 15  |
+Feb. 20  |
+Feb. 22  | Exam 1: In class.  Closed notes/books/computers.
