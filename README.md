@@ -12,8 +12,8 @@ Date     | Slides
 ---------|--------
 Jan. 23: | introductionAndOverview (slides 1-29)
 Jan. 25: | introductionAndOverview (slides 29-end)
-Jan. 30  | introductionRegression (slides 1-?)
-Feb. 01  |
+Jan. 30  | introductionRegression (slides 1-end), riskEstimation (slides 1-6)
+Feb. 01  | riskEstimation (slides 6-end) modelSelection(1-?)
 Feb. 06  |
 Feb. 08  |
 Feb. 13  |
