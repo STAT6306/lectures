@@ -14,9 +14,9 @@ Jan. 23: | introductionAndOverview (slides 1-29)
 Jan. 25: | introductionAndOverview (slides 29-end)
 Jan. 30  | introductionRegression (slides 1-end), riskEstimation (slides 1-6)
 Feb. 01  | riskEstimation (slides 6-end) modelSelection(1-6)
-Feb. 06  | modelSelection(6-end) linearRegularization (1-?)
-Feb. 08  | linearRegularization (?-?)
-Feb. 13  |
+Feb. 06  | modelSelection(6-end) 
+Feb. 08  | linearRegularization (1-21)
+Feb. 13  | linearRegularization (21-?)
 Feb. 15  |
 Feb. 20  |
 Feb. 22  | Exam 1: In class.  Closed notes/books/computers.
