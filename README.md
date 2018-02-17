@@ -17,6 +17,6 @@ Feb. 01  | riskEstimation (slides 6-end) modelSelection(1-6)
 Feb. 06  | modelSelection(6-end) 
 Feb. 08  | linearRegularization (1-21)
 Feb. 13  | linearRegularization (21-33)
-Feb. 15  | linearRegularization (33-?) Inclass exercise: Gradient descent
-Feb. 20  | 
+Feb. 15  | linearRegularization (33-46) Inclass: Code Gradient descent
+Feb. 20  | linearRegularization (46-end) Inclass: Code Stochastic gradient descent
 Feb. 22  | Exam 1: In class.  Closed notes/books/computers.
