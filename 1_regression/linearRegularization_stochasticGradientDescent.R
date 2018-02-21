@@ -39,33 +39,41 @@ rF = function(ell){
 #Step 0
 bHatInitial   = rnorm(p)
 bHat          = bHatInitial
-nSweep        = 100
+#nSweep        = 100
 learnRate     = .1
-bHatSweep     = matrix(0,nrow=nSweep,ncol=p)
+
 
 #Stochastic Gradient Descent
-miniBatchParm = n/10
-
+miniBatchParm = 50
+threshold     = .005
 #Step 1: Now, keep iterating over the features 1 up to p:
  
 #Step 1a: Iterate some number of times (note: in practice you want to iterate until some criterion is met)
-for(sweep in 1:nSweep){
+maxSweep  = 10000
+sweep     = 0
+bHatSweep = matrix(0,nrow=maxSweep,ncol=p)
+grad_j    = rep(2*threshold,p)
+
+while(sqrt(sum(grad_j**2)) > threshold & sweep < maxSweep){
+  sweep = sweep + 1
+  batch = sample(1:n,miniBatchParm,replace=FALSE)
   #Step 1b: Iterate from 1 up to p
   for(j in 1:p){
     #Step 2a:Forward
-    f   = fF(X,bHat)
-    ell = ellF(Y,f)
+    f   = fF(X[batch,],bHat)
+    ell = ellF(Y[batch],f)
     r   = rF(ell)
     #Step 2b:Backward
-    dell_df = -2*(Y - f)
-    df_dbj  = X[,j]
+    dell_df = -2*(Y[batch] - f)
+    df_dbj  = X[batch,j]
     dR_dbj   = rF( dell_df*df_dbj )
     #Step 3: Update
     bHat[j]  = bHat[j] - learnRate * dR_dbj
+    grad_j[j] = dR_dbj
   }
   bHatSweep[sweep,] = bHat
 }
-
+cat('total number or sweeps: ',sweep,'. Max number of sweeps is: ',maxSweep,'\n')
 
 bHat_LS = lm(Y~X-1)$coef
 print(bHat_LS)
@@ -73,7 +81,7 @@ print(bHatSweep[nSweep,])
 
 plotLoss = TRUE
 if(p == 2){
-plot(bHatSweep[,1:2],col=rainbow(nSweep),xlab='beta1',ylab='beta2',
+plot(bHatSweep[1:sweep,1:2],col=rainbow(sweep),xlab='beta1',ylab='beta2',
      xlim = c(-2,2),ylim=c(-4,2))
 points(bHat_LS[1],bHat_LS[2],col='black',pch=17)
 points(bHatInitial[1],bHatInitial[2],col='green',pch='+')
@@ -98,7 +106,7 @@ if(plotLoss & p == 2){
           xlab='beta1',ylab='beta2',zlab='RSS',
           bty='f',alpha=.35,resfac = 1,ticktype = "detailed",zlim=c(0,20),
           contour = list(z = rssF(bHat_LS),nlevels=15))
-  scatter3D(bHatSweep[,1], bHatSweep[,2], rep(0,nSweep), add = TRUE, colvar = nSweep:1, 
+  scatter3D(bHatSweep[1:sweep,1], bHatSweep[1:sweep,2], rep(0,sweep), add = TRUE, colvar = sweep:1, 
            colkey = FALSE,pch='o')
   points3D(bHat_LS[1], bHat_LS[2], 0, add = TRUE, colvar = 0, 
            colkey = FALSE, pch = 'X', cex = 1)
