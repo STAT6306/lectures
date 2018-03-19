@@ -27,6 +27,6 @@ Mar. 08  | classificationLDAandQDA (rest)
 this day)
 Mar. 13  | Spring Break
 Mar. 15  | Spring Break
-Mar. 20  | classificationMetrics (all)
+Mar. 20  | classificationMetrics (all) decisionTrees
 Mar. 22  | Class Canceled, start exam 2
 May 10  | Final exam at 3 pm in usual classroom
