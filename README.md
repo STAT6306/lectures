@@ -24,7 +24,6 @@ Feb. 27  | linearAdditionalTopics (Slides 1-21)
 Mar. 01  | linearAdditionalTopics (Slides 21-end) classificationIntroduction (Slides 1 - 15)
 Mar. 06  | classificationIntroduction (Slides 15 - end) classificationLDAandQDA (1-?)
 Mar. 08  | classificationLDAandQDA (rest)
-this day)
 Mar. 13  | Spring Break
 Mar. 15  | Spring Break
 Mar. 20  | classificationMetrics (all) decisionTrees
