@@ -28,4 +28,16 @@ Mar. 13  | Spring Break
 Mar. 15  | Spring Break
 Mar. 20  | classificationMetrics (all) decisionTrees
 Mar. 22  | Class Canceled, start exam 2
-May 10  | Final exam at 3 pm in usual classroom
+Mar. 27  | 
+Mar. 29  | 
+Apr. 03  | 
+Apr. 05  | 
+Apr. 10  | 
+Apr. 12  | 
+Apr. 17  | 
+Apr. 19  | 
+Apr. 24  | 
+Apr. 26  | 
+May  01  | 
+May  03  | 
+May  10  | Final exam at 3 pm in usual classroom
