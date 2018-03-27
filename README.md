@@ -26,9 +26,9 @@ Mar. 06  | classificationIntroduction (Slides 15 - end) classificationLDAandQDA 
 Mar. 08  | classificationLDAandQDA (rest)
 Mar. 13  | Spring Break
 Mar. 15  | Spring Break
-Mar. 20  | classificationMetrics (all) decisionTrees
+Mar. 20  | classificationMetrics (all) decisionTrees (slides 1 - 11)
 Mar. 22  | Class Canceled, start exam 2
-Mar. 27  | 
+Mar. 27  | decisionTrees (slides 12 - end)
 Mar. 29  | 
 Apr. 03  | 
 Apr. 05  | 
