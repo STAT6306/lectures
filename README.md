@@ -1,7 +1,6 @@
 # lectures
 This repository holds the lecture notes for the class.  Be aware that I may 
-update the lecture notes after they are posted.  Periodically check the the
-most recent commit date and comment to see if you have the most recent version. A better strategy would be the use github to update your local version of the
+update the lecture notes after they are posted.  Periodically check the most recent commit date and comment to see if you have the most recent version. A better strategy would be the use github to update your local version of the
 repository (e.g. git pull).
 
 # Class Schedule
@@ -29,8 +28,8 @@ Mar. 15  | Spring Break
 Mar. 20  | classificationMetrics (all) decisionTrees (slides 1 - 11)
 Mar. 22  | Class Canceled, start exam 2
 Mar. 27  | decisionTrees (slides 12 - end)
-Mar. 29  | 
-Apr. 03  | 
+Mar. 29  | bagging (slides 1 - 28)
+Apr. 03  | bagging/random forest (slides 28 - end), optimal separating hyperplane (slides 1 - ?)
 Apr. 05  | 
 Apr. 10  | 
 Apr. 12  | 
