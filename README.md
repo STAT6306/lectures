@@ -29,12 +29,12 @@ Mar. 20  | classificationMetrics (all) decisionTrees (slides 1 - 11)
 Mar. 22  | Class Canceled, start exam 2
 Mar. 27  | decisionTrees (slides 12 - end)
 Mar. 29  | bagging (slides 1 - 28)
-Apr. 03  | bagging/random forest (slides 28 - end), optimal separating hyperplane (slides 1 - ?)
-Apr. 05  | 
-Apr. 10  | 
+Apr. 03  | bagging/random forest (slides 28 - missing data), 
+Apr. 05  | Finish bagging slides, optimal separating hyperplane (slides 1 - 16)
+Apr. 10  | optimal separating hyperplane (slides 16 to end) SVM 2 
 Apr. 12  | 
 Apr. 17  | 
-Apr. 19  | 
+Apr. 19  | NOTE: EXAM ASSIGNED
 Apr. 24  | 
 Apr. 26  | 
 May  01  | 
