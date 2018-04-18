@@ -32,11 +32,11 @@ Mar. 29  | bagging (slides 1 - 28)
 Apr. 03  | bagging/random forest (slides 28 - missing data), 
 Apr. 05  | Finish bagging slides, optimal separating hyperplane (slides 1 - 16)
 Apr. 10  | optimal separating hyperplane (slides 16 to end) SVM 2 
-Apr. 12  | 
-Apr. 17  | 
-Apr. 19  | NOTE: EXAM ASSIGNED
-Apr. 24  | 
-Apr. 26  | 
-May  01  | 
-May  03  | 
+Apr. 12  | support vector machine/kernel PCA
+Apr. 17  | Intro to Boosting/Nonparametric regression: Boosting 1 (slides 1 - 32)
+Apr. 19  | Boosting (NOTE: EXAM ASSIGNED DURING YOUR SELECTED INTERVAL)
+Apr. 24  | Boosting
+Apr. 26  | Neural Networks
+May  01  | Neural Networks
+May  03  | Neural Networks/Ensemble Methods
 May  10  | Final exam at 3 pm in usual classroom
